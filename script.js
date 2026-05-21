@@ -1,7 +1,7 @@
 const levels = [
-    { answer: 'lego', video: 'cube.mp4' },
-    { answer: 'cube', video: 'planet.mp4' },
-    { answer: 'planet', video: '' } 
+    { answer: 'lego', poster: 'cube.mp4' },
+    { answer: 'cube', poster: 'planet.mp4' },
+    { answer: 'planet', poster: '' } 
 ];
 
 
@@ -14,7 +14,7 @@ function check(event) {
     const currentLevel = Number(level.value) - 1;
 
     if (currentLevel < levels.length && inputValue == levels[currentLevel].answer) {
-        alert("Answer correct");
+        alert("Good job");
         score.value = Number(score.value) + 1;
         level.value = Number(level.value) + 1; // Move to next level
 
@@ -24,7 +24,7 @@ function check(event) {
         }
     } else {
         score.value = Number(score.value) - 1;
-        alert("Answer incorrect or wrong level!");
+        alert("Try again");
     }
 
     return false;
