@@ -21,7 +21,7 @@ function check(event) {
 
         if (levels[currentLevel].video) {
             video.poster = levels[currentLevel].poster;
-  //          video.load();
+            video.load();
         }
     } else {
         score.value = Number(score.value) - 1;
