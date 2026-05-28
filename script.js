@@ -19,7 +19,7 @@ function check(event) {
         score.value = Number(score.value) + 1;
         level.value = Number(level.value) + 1; // Move to next level
 
-        if (levels[currentLevel].video) {
+        if (levels[currentLevel].poster) {
             video.poster = levels[currentLevel].poster;
             video.load();
         }
