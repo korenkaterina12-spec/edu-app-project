@@ -1,7 +1,8 @@
 const levels = [
-    { answer: 'lego', poster: 'cube.mp4' },
-    { answer: 'cube', poster: 'planet.mp4' },
-    { answer: 'planet', poster: '' } 
+    { answer: 'france', poster: 'OIP-1469815071.jpg' },
+    { answer: 'georgia', poster: 'OIP-3380599782.jpg' },
+    { answer: 'germany', poster: 'OIP-875988607.jpg' },
+     { answer: 'spain'}
 ];
 
 
@@ -19,8 +20,8 @@ function check(event) {
         level.value = Number(level.value) + 1; // Move to next level
 
         if (levels[currentLevel].video) {
-            video.children[0].src = levels[currentLevel].video;
-            video.load();
+            video.poster = levels[currentLevel].poster;
+  //          video.load();
         }
     } else {
         score.value = Number(score.value) - 1;
